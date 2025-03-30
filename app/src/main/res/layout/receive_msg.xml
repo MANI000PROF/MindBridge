@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="start"
+    android:layout_gravity="start"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Reply Layout -->
+    <LinearLayout
+        android:id="@+id/reply_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"> <!-- Initially hidden -->
+
+        <TextView
+            android:id="@+id/reply_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/reply_user_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/reply_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" /> <!-- Hide if not replying to an image -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mLinear"
+        android:orientation="horizontal"
+        android:background="@drawable/receive_drawable"
+        android:padding="15dp"
+        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/message"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textStyle="bold|normal"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_margin="5dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        android:src="@drawable/placeholder"
+        android:layout_width="200dp"
+        android:layout_height="130dp"
+        android:clickable="true"
+        android:focusable="true"/>
+</LinearLayout>

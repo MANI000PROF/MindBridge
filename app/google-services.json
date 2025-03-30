@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "210933778976",
+    "firebase_url": "https://mindbridge-798c3-default-rtdb.firebaseio.com",
+    "project_id": "mindbridge-798c3",
+    "storage_bucket": "mindbridge-798c3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:210933778976:android:f8c025e63b15b655554a45",
+        "android_client_info": {
+          "package_name": "com.example.mindbridge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "210933778976-iorl1rfl8g0m1lqe9i0uoc1ajefflle3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mindbridge",
+            "certificate_hash": "2fe5344c566a60101144d7cbb9305a580ab34391"
+          }
+        },
+        {
+          "client_id": "210933778976-4jgge9oj6ntvjiu7s5srcrkl5341pdnv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC25o-SihtOM_ik1WT0Zhf2qZFW9oJNPzk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "210933778976-4jgge9oj6ntvjiu7s5srcrkl5341pdnv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

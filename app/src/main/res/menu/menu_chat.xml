@@ -1,0 +1,9 @@
+<!-- res/menu/menu_chat.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_clear_all_messages"
+        android:title="Clear All Messages"
+        android:icon="@drawable/ic_clear"
+        app:showAsAction="ifRoom" />
+</menu>
