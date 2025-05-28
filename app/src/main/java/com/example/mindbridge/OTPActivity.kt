@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
-import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -110,7 +109,7 @@ class OTPActivity : AppCompatActivity() {
                         if (userTask.isSuccessful) {
                             // Navigate to Main Activity after successful sign-in
                             Toast.makeText(this, "Verification successful!", Toast.LENGTH_SHORT).show()
-                            startActivity(Intent(this, MainPage::class.java))
+                            startActivity(Intent(this, MainActivity::class.java))
                             finish() // Close OTP Activity
                         } else {
                             Toast.makeText(this, "Failed to get user data", Toast.LENGTH_SHORT).show()

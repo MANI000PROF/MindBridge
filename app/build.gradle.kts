@@ -2,13 +2,12 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     id("com.google.gms.google-services")
-    kotlin("kapt")
 }
 
 android {
     namespace = "com.example.mindbridge"
-    compileSdk = 34
-    buildToolsVersion = "34.0.0"
+    compileSdk = 35
+    buildToolsVersion = "35.0.0"
     buildFeatures {
         viewBinding = true
     }
@@ -86,7 +85,6 @@ dependencies {
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.androidx.core)
     implementation(libs.firebase.auth)
-    kapt("com.github.bumptech.glide:compiler:4.13.2") // For annotation processing using kapt
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -95,5 +93,6 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation("com.github.denzcoskun:Imageslideshow:0.1.2")
+    implementation("com.airbnb.android:lottie:6.1.0")
 }
 

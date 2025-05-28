@@ -7,15 +7,12 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.bumptech.glide.Glide
 import com.example.mindbridge.databinding.ActivitySetupProfileBinding
 import com.example.mindbridge.model.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
-import java.util.Date
 
 class SetupProfileActivity : AppCompatActivity() {
 
@@ -144,9 +141,9 @@ class SetupProfileActivity : AppCompatActivity() {
         }
     }
 
-    // Function to navigate to MainActivity
+    // Function to navigate to ChatUsersActivity
     private fun navigateToMainActivity() {
-        val intent = Intent(this@SetupProfileActivity, MainActivity::class.java)
+        val intent = Intent(this@SetupProfileActivity, ChatUsersActivity::class.java)
         startActivity(intent)
         finish()
     }

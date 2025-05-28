@@ -8,8 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.mindbridge.MainActivity
-import com.example.mindbridge.R
+import com.example.mindbridge.ChatUsersActivity
 import com.example.mindbridge.adapter.chatUserAdapter
 import com.example.mindbridge.chatActivity
 import com.example.mindbridge.databinding.FragmentChatBinding
@@ -32,7 +31,7 @@ class ChatFragment : Fragment() {
         fetchMentorsFromFirebase()
 
         binding.viewProfileBtn.setOnClickListener {
-            val intent = Intent(requireContext(), MainActivity::class.java)
+            val intent = Intent(requireContext(), ChatUsersActivity::class.java)
             startActivity(intent)
         }
 

@@ -10,6 +10,7 @@ import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
 import com.example.mindbridge.R
 import com.example.mindbridge.ViewBottomSheetFragment
+import com.example.mindbridge.adapter.MentorSliderAdapter
 import com.example.mindbridge.adapter.TrendMentorAdapter
 import com.example.mindbridge.databinding.FragmentHomeBinding
 import com.example.mindbridge.model.Mentor
@@ -19,6 +20,7 @@ class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
     private lateinit var trendMentorAdapter: TrendMentorAdapter
     private val mentorList: MutableList<Mentor> = mutableListOf()
+    private lateinit var mentorSliderAdapter: MentorSliderAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,10 +43,17 @@ class HomeFragment : Fragment() {
 
         setupImageSlider()
         setupRecyclerView()
+        // Initialize mentor slider recycler view horizontally
+        binding.mentorSliderRecycler.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+
+        mentorSliderAdapter = MentorSliderAdapter(mentorList)
+        binding.mentorSliderRecycler.adapter = mentorSliderAdapter
 
         // Fetch mentors from Firebase
         fetchMentorsFromFirebase()
     }
+
 
     private fun setupImageSlider() {
         val imageList = ArrayList<SlideModel>()
@@ -64,6 +73,7 @@ class HomeFragment : Fragment() {
     private fun fetchMentorsFromFirebase() {
         val database = FirebaseDatabase.getInstance().getReference("mentors")
         database.addValueEventListener(object : ValueEventListener {
+
             override fun onDataChange(snapshot: DataSnapshot) {
                 mentorList.clear()
                 for (snapshot1 in snapshot.children) {
@@ -73,6 +83,7 @@ class HomeFragment : Fragment() {
                     }
                 }
                 trendMentorAdapter.notifyDataSetChanged()
+                mentorSliderAdapter.notifyDataSetChanged() // Update horizontal slider too
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -80,4 +91,5 @@ class HomeFragment : Fragment() {
             }
         })
     }
+
 }

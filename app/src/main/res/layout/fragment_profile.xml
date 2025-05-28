@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:layout_marginTop="8dp"
     android:orientation="vertical"
-    android:background="#F4EAE8"
     android:paddingStart="6dp"
     android:paddingEnd="6dp"
     tools:context=".Fragment.ProfileFragment">

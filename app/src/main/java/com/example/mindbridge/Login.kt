@@ -9,11 +9,8 @@ import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -51,8 +48,8 @@ class Login : AppCompatActivity() {
 
         // Check if a user is already logged in
         if (auth.currentUser != null) {
-            // If a user is already logged in, navigate to MainActivity
-            val intent = Intent(this, MainPage::class.java)
+            // If a user is already logged in, navigate to ChatUsersActivity
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish() // Close the login activity
         }
@@ -157,7 +154,7 @@ class Login : AppCompatActivity() {
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     // Login successful, redirect to Main page
-                    val intent = Intent(this, MainPage::class.java)
+                    val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
                     finish()
                 } else {
@@ -206,7 +203,7 @@ class Login : AppCompatActivity() {
                     val user: FirebaseUser? = auth.currentUser
                     // Navigate to the Main Page or handle the logged-in user
                     Toast.makeText(this, "Sign in successful", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this, MainPage::class.java)
+                    val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
                     finish()
                 } else {

@@ -15,11 +15,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "210933778976-iorl1rfl8g0m1lqe9i0uoc1ajefflle3.apps.googleusercontent.com",
+          "client_id": "210933778976-9kv37tieefe6aq0ceekdbu7fu9i6grgf.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.mindbridge",
-            "certificate_hash": "2fe5344c566a60101144d7cbb9305a580ab34391"
+            "certificate_hash": "82f9fdc27efd9d4067e82509c16933ce47c81bcf"
           }
         },
         {

@@ -8,13 +8,13 @@
     <item android:title="Chat"
         android:id="@+id/chatFragment"
         android:icon="@drawable/chat"/>
-    <item android:title="Search"
-        android:id="@+id/searchFragment"
-        android:icon="@drawable/search"/>
     <item android:title="Classroom"
         android:id="@+id/classroomFragment"
         android:icon="@drawable/classroom"/>
+    <item android:title="Search"
+        android:id="@+id/searchFragment"
+        android:icon="@drawable/search"/>
     <item android:title="Profile"
         android:id="@+id/profileFragment"
-        android:icon="@drawable/user"/>
+        android:icon="@drawable/ic_profile"/>
 </menu>
